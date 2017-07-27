@@ -1,0 +1,47 @@
+<div class="container" ng-controller="matchCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader">
+                    </div>
+                    <div class="avatar">
+                        <img ng-src="{{match.picture.large}}" alt="Match image">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            {{fullName()}}
+                        </div>
+                        <div class="desc">Gender: {{match.gender}}</div>
+                    </div>
+                    <div class="bottom">
+                        <a class="btn round-btn btn-success btn-sm" rel="publisher" href="#">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                        <a class="btn round-btn btn-danger btn-sm" rel="publisher" href="#" ng-click="getMatch()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div>
+            <div class="col-lg-3 col-sm-6 search-area center">
+                <div class="search-area search-workout">
+                    <button ng-class="['btn', upper]" ng-click="setWorkout('upper')">Upper Body</button>
+                    <button ng-class="['btn', lower]" ng-click="setWorkout('lower')">Lower Body</button>
+                    <button ng-class="['btn', all]" ng-click="setWorkout('all')">Full Body</button>
+                </div>
+                <div class="search-area search-sex">
+                    <button ng-class="['btn', maleStyle]" ng-click="toggleSex('male')">Male</button>
+                    <button ng-class="['btn', femaleStyle]" ng-click="toggleSex('female')">Female</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div ng-controller="logoutController">
+  <a ng-click='logout()' class="btn btn-default">Logout</a>
+</div>
